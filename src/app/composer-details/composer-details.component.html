@@ -1,0 +1,17 @@
+<!-- Name: Justin Barlowe
+File: composer-details.component.html
+Description: HTML composer details file for composer app
+Date: 10/30/2023 -->
+
+<!-- HTML list for composers to return -->
+<div class="row">
+<div class="col-sm-12">
+  <ul class="list-group">
+  <li class="list-group-item"><strong>Composer ID:</strong> {{composerId }}</li>
+  <li class="list-group-item"><strong>Full Name:</strong> {{ composer.fullName }}</li>
+  <li class="list-group-item"><strong>Genre:</strong> {{ composer.genre }}</li>
+  </ul>
+  <br>
+  <a routerLink="/composer-list" class="float-right">Back to Composer List</a>
+</div>
+</div>

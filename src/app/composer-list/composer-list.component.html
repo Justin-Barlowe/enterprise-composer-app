@@ -1,0 +1,39 @@
+<!-- Name: Justin Barlowe
+File: app.composer-list.html
+Description: HTML composer list file for composer app
+Date: 10/24/2023 -->
+
+<!-- Create Table -->
+<div class="row">
+  <!-- Table for Composers -->
+  <h2 class="text-center">Composer List</h2>
+
+  <div class="col">
+    <div class="textSearch">
+      <input type="text" class="txtSearch" class="form-control" placeholder="Search By Name"[formControl]="txtSearchControl">
+    </div>
+
+    <table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Composer ID</th>
+      <th scope="col">Full name</th>
+      <th scope="col">Genre</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Loop over array of composers -->
+    <tr *ngFor="let composer of composers | async">
+      <td>
+        <!-- Routerlink   -->
+        <a routerLink="/composer-details/{{ composer.composerId }}">
+          {{ composer.composerId }}
+          </a>
+      </td>
+      <td>{{ composer.fullName }}</td>
+      <td>{{ composer.genre }}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
